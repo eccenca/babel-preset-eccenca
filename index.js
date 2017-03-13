@@ -1,12 +1,12 @@
 module.exports = {
     presets: [
-        [require("babel-preset-es2015"), {"loose": true}]
-        require("babel-preset-stage-0"),
-        require("babel-preset-react")
+        ["es2015", {"loose": true}],
+        "stage-0",
+        "react"
     ],
     plugins: [
-        require("babel-plugin-add-module-exports"),
-        [require("babel-plugin-transform-builtin-extend"), {
+        "add-module-exports",
+        [require("babel-plugin-transform-builtin-extend").default, {
             globals: ["Error", "Array"]
         }]
     ]
